@@ -1,0 +1,51 @@
+{
+  "name": "metabot",
+  "version": "0.0.1",
+  "author": "Timur Shemsedinov <timur.shemsedinov@gmail.com>",
+  "license": "MIT",
+  "description": "Metarhia chatbot engine",
+  "keywords": [
+    "node.js",
+    "metarhia",
+    "chat",
+    "bot",
+    "engine",
+    "chatbot"
+  ],
+  "main": "metabot.js",
+  "types": "metabot.d.ts",
+  "files": [
+    "lib/",
+    "metabot.d.ts"
+  ],
+  "engines": {
+    "node": "18 || 20 || 21 || 22"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/metarhia/metabot.git"
+  },
+  "bugs": {
+    "url": "https://github.com/metarhia/metabot/issues",
+    "email": "timur.shemsedinov@gmail.com"
+  },
+  "homepage": "https://metarhia.com",
+  "funding": {
+    "type": "patreon",
+    "url": "https://www.patreon.com/tshemsedinov"
+  },
+  "scripts": {
+    "test": "npm run lint && npm run types && metatests test/",
+    "types": "tsc -p tsconfig.json",
+    "lint": "eslint . && prettier --check \"**/*.js\" \"**/*.json\" \"**/*.md\" \"**/*.ts\"",
+    "fix": "eslint . --fix && prettier --write \"**/*.js\" \"**/*.json\" \"**/*.md\" \"**/*.ts\""
+  },
+  "devDependencies": {
+    "@types/node": "^22.5.1",
+    "eslint": "^9.9.1",
+    "eslint-config-metarhia": "^9.0.6",
+    "metatests": "^0.9.0",
+    "prettier": "^3.3.3",
+    "typescript": "^5.5.4"
+  }
+}
