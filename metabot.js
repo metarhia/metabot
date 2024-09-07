@@ -1,5 +1,7 @@
 'use strict';
 
-const main = async () => {};
+const { parseMarkdown } = require('./lib/markdown.js');
+const { Chat, Metabot } = require('./lib/metabot.js');
+const { Stopwatch } = require('./lib/stopwatch.js');
 
-module.exports = { main };
+module.exports = { parseMarkdown, Metabot, Chat, Stopwatch };
